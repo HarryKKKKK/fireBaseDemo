@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.e("database", "button clicked.");
-                // TODO: db action;
+                db.collection("MyData").document("Data").update("updatedValue", "somevalue");
             }
         });
 
