@@ -1,6 +1,9 @@
 package com.example.firebasetest;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     // creating a variable for text view.
     TextView updatedTV;
+    Button updatedButton;
 
     // initializing the variable for firebase firestore
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -47,6 +51,17 @@ public class MainActivity extends AppCompatActivity {
                }
            }
        });
+
+        updatedButton = findViewById(R.id.buttonUpdate);
+        updatedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.e("database", "button clicked.");
+                // TODO: db action;
+            }
+        });
+
+
 //        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
 //            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
 //            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
