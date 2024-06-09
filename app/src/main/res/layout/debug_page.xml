@@ -11,28 +11,12 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/idTVHead"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="5dp"
-        android:layout_marginTop="60dp"
-        android:text="Firebase Firestore as Realtime Database"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@color/purple"
-        android:textSize="40sp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
         android:id="@+id/idTVUpdate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Updated Text"
         android:textAlignment="center"
-        android:textColor="@color/purple"
         android:textSize="40sp"
-        android:layout_below="@+id/idTVHead"
         android:layout_marginTop="60dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="5dp"
@@ -46,5 +30,5 @@
         android:layout_marginTop="60dp"
         android:layout_below="@+id/idTVUpdate"
         android:layout_centerHorizontal="true"
-        android:text="Update" />
+        android:text="Set info." />
 </RelativeLayout>
