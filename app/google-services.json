@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "934204762395",
+    "project_id": "fir-test-cfafa",
+    "storage_bucket": "fir-test-cfafa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934204762395:android:a91cf6875c744a8bde0bbe",
+        "android_client_info": {
+          "package_name": "com.example.firebasetest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSnhyH9JnTYCq4M6hvZl9YtJjQdNMyyVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
