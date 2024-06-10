@@ -39,8 +39,7 @@ public class GameRoomActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.room_page);
 
-        model = new ViewModelProvider(this).get(AppModel.class);
-        model.getCurRoom().observe(this, new Observer<Room>() {
+        AppModel.getModel().getCurRoom().observe(this, new Observer<Room>() {
             @Override
             public void onChanged(Room room) {
                 Log.e("room", "refreshed in observer");
