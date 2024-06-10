@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Room curRoom = new Room(game, new User("Owner", 0), "Id0000");
-                AppModel.getModel().setCurRoom(curRoom);
                 Intent intent = new Intent(MainActivity.this, GameRoomActivity.class);
                 startActivity(intent);
             }

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -28,6 +29,8 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 public class GameRoomActivity extends AppCompatActivity {
+    final Game game =new Game.Builder().withName("spaceShip").withPlace("Imperial").withInfo("intro for game1.").withImage(R.mipmap.spaceship).withCapacity(3).build();
+
     private AppModel model;
     private Room curRoom;
     @Override
@@ -40,6 +43,7 @@ public class GameRoomActivity extends AppCompatActivity {
         model.getCurRoom().observe(this, new Observer<Room>() {
             @Override
             public void onChanged(Room room) {
+                Log.e("room", "refreshed in observer");
                 updateRoomView(room);
             }
         });
@@ -87,12 +91,9 @@ public class GameRoomActivity extends AppCompatActivity {
         refreshBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO
-//                AppModel.getModel().refreshView();
-//                updateRoomView();
-                if (curRoom.isStart()) {
-                    gameStart();
-                }
+                Log.e("room", "refreshed");
+                Room curRoom = new Room(game, new User("Owner", 0), "iD89324");
+                AppModel.getModel().setCurRoom(curRoom);
             }
         });
     }

@@ -1,6 +1,8 @@
 package com.example.firebasetest;
 
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -8,7 +10,7 @@ import androidx.lifecycle.ViewModel;
 public class AppModel extends ViewModel {
     private static AppModel instance;
 //    private final DatabaseDemo db = new DatabaseDemo();
-        private final User owner = new User("Harry", 0);
+    private final User owner = new User("Harry", 0);
     private final MutableLiveData<Room> curRoom = new MutableLiveData<>();
 
     public User getOwner() {
@@ -27,7 +29,9 @@ public class AppModel extends ViewModel {
     }
 
     public void setCurRoom(Room room) {
+        Log.e("room", "refreshed in model: " + room);
         curRoom.setValue(room);
+        curRoom.postValue(room);
     }
 
 }
